@@ -45,6 +45,8 @@ arcolinux-fish
 arcolinux-fonts
 arcolinux-gtk3-arcolinux-candy-beauty
 arcolinux-kvantum
+arcolinux-local-applications-all-hide
+arcolinux-local-applications
 arcolinux-local-xfce4
 arcolinux-neofetch
 arcolinux-nitrogen
