@@ -40,6 +40,7 @@ rm -rf /tmp/input
 directories=(
 arcolinux-alacritty
 arcolinux-bin
+arcolinux-config-all-desktops
 arcolinux-fish
 arcolinux-fonts
 arcolinux-gtk3-arcolinux-candy-beauty
