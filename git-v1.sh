@@ -33,6 +33,43 @@
 echo "Checking for newer files online first"
 git pull
 
+sudo rm -rf root
+sudo rm -rf input
+mkdir root
+directories=(
+arcolinux-alacritty
+arcolinux-fish
+arcolinux-root
+arcolinux-xfce
+arcolinux-zsh)
+
+count=0
+
+for name in "${directories[@]}"; do
+	count=$[count+1]
+	tput setaf 1;echo "$count ": Github " $name ";tput sgr0;
+	
+	git clone https://github.com/arcolinux/$name --depth=1  input
+
+	rm -rf input/.git
+	rm input/git*
+	rm input/LICENSE
+	rm input/README.md
+	rm input/setup-our-git-credentials.sh
+
+	cp -r input/* root
+
+	sudo rm -rf input
+
+	tput setaf 2;
+	echo "#################################################"
+	echo "################  "$name" done"
+	echo "#################################################"
+	tput sgr0;
+done
+
+
+
 # Below command will backup everything inside the project folder
 git add --all .
 
