@@ -33,14 +33,26 @@
 #echo "Checking for newer files online first"
 #git pull
 
-sudo rm -rf root
+rm -rf root
 mkdir root
-sudo rm -rf /tmp/input
+rm -rf /tmp/input
 
 directories=(
 arcolinux-alacritty
+arcolinux-bin
 arcolinux-fish
+arcolinux-fonts
+arcolinux-gtk3-arcolinux-candy-beauty
+arcolinux-kvantum
+arcolinux-local-xfce4
+arcolinux-neofetch
+arcolinux-nitrogen
+arcolinux-paru
+arcolinux-qt5
 arcolinux-root
+arcolinux-variety
+arcolinux-variety-autostart
+arcolinux-volumeicon
 arcolinux-xfce
 arcolinux-zsh)
 
