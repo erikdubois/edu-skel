@@ -72,6 +72,7 @@ done
 
 # Below command will backup everything inside the project folder
 git add --all .
+git add --all root
 
 # Give a comment to the commit if you want
 echo "####################################"
