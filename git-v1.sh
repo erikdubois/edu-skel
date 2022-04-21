@@ -75,7 +75,7 @@ for name in "${directories[@]}"; do
 
 	cp -r /tmp/input/* root
 
-	sudo rm -rf /tmp/input
+	rm -rf /tmp/input
 
 	tput setaf 2;
 	echo "#################################################"
