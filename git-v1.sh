@@ -81,7 +81,7 @@ for name in "${directories[@]}"; do
 	tput sgr0;
 done
 
-
+mv root/etc/skel/.bashrc-latest root/etc/skel/.bashrc
 
 # Below command will backup everything inside the project folder
 git add --all .
