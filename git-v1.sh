@@ -30,12 +30,13 @@
 # git reset --hard
 
 # checking if I have the latest files from github
-echo "Checking for newer files online first"
-git pull
+#echo "Checking for newer files online first"
+#git pull
 
 sudo rm -rf root
-sudo rm -rf input
 mkdir root
+sudo rm -rf /tmp/input
+
 directories=(
 arcolinux-alacritty
 arcolinux-fish
@@ -49,17 +50,17 @@ for name in "${directories[@]}"; do
 	count=$[count+1]
 	tput setaf 1;echo "$count ": Github " $name ";tput sgr0;
 	
-	git clone https://github.com/arcolinux/$name --depth=1  input
+	git clone https://github.com/arcolinux/$name --depth=1  /tmp/input
 
-	rm -rf input/.git
-	rm input/git*
-	rm input/LICENSE
-	rm input/README.md
-	rm input/setup-our-git-credentials.sh
+	rm -rf /tmp/input/.git
+	rm /tmp/input/git*
+	rm /tmp/input/LICENSE
+	rm /tmp/input/README.md
+	rm /tmp/input/setup-our-git-credentials.sh
 
-	cp -r input/* root
+	cp -r /tmp/input/* root
 
-	sudo rm -rf input
+	sudo rm -rf /tmp/input
 
 	tput setaf 2;
 	echo "#################################################"
@@ -72,7 +73,7 @@ done
 
 # Below command will backup everything inside the project folder
 git add --all .
-git add --all root
+#git add --all root
 
 # Give a comment to the commit if you want
 echo "####################################"
