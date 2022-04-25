@@ -56,6 +56,7 @@ arcolinux-root
 arcolinux-variety
 arcolinux-variety-autostart
 arcolinux-volumeicon
+arcolinux-system-config
 arcolinux-xfce
 arcolinux-zsh)
 
@@ -85,6 +86,17 @@ for name in "${directories[@]}"; do
 done
 
 mv root/etc/skel/.bashrc-latest root/etc/skel/.bashrc
+rm root/etc/pacman.d/hooks/arcolinux-system-config-logo.hook
+rm root/etc/pacman.d/hooks/filesystem-logo.hook
+rm root/etc/pacman.d/hooks/lsb-release.hook
+rm root/etc/pacman.d/hooks/os-release.hook
+rm root/usr/lib/os-release-arcolinux
+
+rm root/usr/local/bin/arcolinux-lsb-release
+rm root/usr/local/bin/arcolinux-os-release
+
+rm root/etc/pacman.d/hooks/archlinux-appstream-data.hook
+rm root/usr/local/bin/arcolinux-appstream-data-fix
 
 # Below command will backup everything inside the project folder
 git add --all .
