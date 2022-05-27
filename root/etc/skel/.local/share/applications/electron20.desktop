@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=Electron
+Name=Electron 20
 Icon=electron20
 Exec=electron20 %u
 Categories=Development;GTK;
