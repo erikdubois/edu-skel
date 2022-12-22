@@ -56,7 +56,6 @@ arcolinux-root
 arcolinux-variety
 arcolinux-variety-autostart
 arcolinux-volumeicon
-arcolinux-xfce
 arcolinux-zsh)
 
 count=0
