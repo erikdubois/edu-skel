@@ -51,6 +51,8 @@ arcolinux-neofetch
 arcolinux-nitrogen
 arcolinux-paru
 arcolinux-qt5
+arcolinux-rofi
+arcolinux-rofi-themes
 arcolinux-root
 arcolinux-variety
 arcolinux-variety-autostart
